@@ -9,7 +9,7 @@ import play.api.Configuration
 import play.api.libs.json.{ JsBoolean, JsObject, JsString, Json }
 import play.api.libs.json.Json.toJsFieldJsValueWrapper
 import play.api.mvc.{ AbstractController, Action, AnyContent, ControllerComponents }
-import com.sksamuel.elastic4s.ElasticDsl
+import com.sksamuel.elastic4s.http.ElasticDsl
 import connectors.Connector
 import models.HealthStatus
 import org.elastic4play.Timed
