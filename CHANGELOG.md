@@ -1,5 +1,20 @@
 # Change Log
 
+## [2.13.4](https://github.com/TheHive-Project/TheHive/tree/2.13.4) (2019-05-22)
+[Full Changelog](https://github.com/TheHive-Project/TheHive/compare/2.13.3...2.13.4)
+
+**Fixed bugs:**
+
+- THP-SEC-ADV-2017-001: Privilege Escalation in all Versions of TheHive [\#408](https://github.com/TheHive-Project/TheHive/issues/408)
+
+## [2.13.3](https://github.com/CERT-BDF/TheHive/tree/2.13.3) (2017-12-22)
+
+[Full Changelog](https://github.com/CERT-BDF/TheHive/compare/2.13.2...2.13.3)
+
+**Fixed bugs:**
+
+- THP-SEC-ADV-2017-001: Privilege Escalation in all Versions of TheHive [\#408](https://github.com/TheHive-Project/TheHive/issues/408)
+
 ## [2.13.2](https://github.com/CERT-BDF/TheHive/tree/2.13.2) (2017-10-24)
 
 [Full Changelog](https://github.com/CERT-BDF/TheHive/compare/2.13.1...2.13.2)
