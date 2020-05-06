@@ -25,9 +25,6 @@
 
         this.getJobs = function(caseId, observableId, analyzerId, limit) {
             return $http.post(baseUrl + '/job/_search', {
-                sort: '-startDate',
-                range: '0-' + (
-                limit || 10),
                 query: {
                     _and: [
                         {
@@ -42,14 +39,16 @@
                                 {
                                     analyzerId: analyzerId
                                 }, {
-                                    _like: {
-                                        _field: 'analyzerDefinition',
-                                        _value: analyzerId
-                                    }
+                                    'analyzerDefinition': analyzerId                                    
                                 }
                             ]
                         }
                     ]
+                }
+            }, {
+                params: {
+                    sort: '-startDate',
+                    range: '0-' + (limit || 10),
                 }
             });
         };
