@@ -65,6 +65,7 @@ lazy val thehive = (project in file("."))
     aggregate in Docker := false,
     aggregate in changeLog := false
   )
+
 lazy val rpmPackageRelease = (project in file("package/rpm-release"))
   .enablePlugins(RpmPlugin)
   .settings(projectSettings)
@@ -89,6 +90,12 @@ lazy val rpmPackageRelease = (project in file("package/rpm-release"))
         file("LICENSE")                              → "/usr/share/doc/thehive-project-release/LICENSE"
       )
     )
+  )
+
+lazy val elasticTool = (project in file("elasticTool"))
+  .settings(projectSettings)
+  .settings(
+    libraryDependencies ++= Seq(Library.elastic4play, Library.scopt)
   )
 
 rpmReleaseFile := {
