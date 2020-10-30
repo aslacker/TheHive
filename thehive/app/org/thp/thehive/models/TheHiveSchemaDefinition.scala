@@ -72,7 +72,8 @@ class TheHiveSchemaDefinition @Inject() extends Schema with UpdatableSchema {
       traversal.unsafeHas("status", "Deleted").remove()
       Success(())
     }
-    .updateGraph("Remove deleted property from logs", "Log") { traversal =>
+    .updateGraph("Remove deleted logs and deleted property from logs", "Log") { traversal =>
+      traversal.unsafeHas("deleted", "true").remove()
       traversal.removeProperty("deleted")
       Success(())
     }
